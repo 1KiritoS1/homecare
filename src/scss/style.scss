@@ -1,0 +1,1064 @@
+@import 'normalize';
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+span {
+	display: block;
+}
+
+button {
+	display: block;
+	background: transparent;
+	cursor: pointer;
+	border: none;
+}
+
+button, input, select, option, textarea {
+	font-family: 'Inter', sans-serif;
+}
+
+.container {
+	width: 100%;
+	max-width: 1168px;
+	margin: 0 auto; 
+}
+
+.header {
+	padding: 33px 0 66px;
+	background: url('../img/header/bacterium.svg') no-repeat center left;
+}
+
+.header__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+}
+
+.nav__link {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 21px;
+	letter-spacing: .5px;
+	color: #333;
+
+	margin-right: 35px;
+	transition: all .1s ease;
+	position: relative;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	&:after {
+		content: '';
+		display: block;
+		width: 7px;
+		height: 7px;
+		border-radius: 50%;
+		background: #64CF83;
+		transition: all .3s ease;
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		left: 50%;
+	}
+
+	&:hover {
+		color: #44b564;
+		
+		&:after {
+			transform: translateY(33px);
+			opacity: 1;
+		}
+	}
+
+	&.active {
+		color: #44b564;
+
+		&:after {
+			transform: translateY(33px);
+			opacity: 1;
+		}
+	}
+}
+
+.header__burger {
+	display: none;
+}
+
+.hero {
+	padding: 54px 0 65px;
+}
+
+.hero__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.hero__left {
+	width: 100%;
+	max-width: 539px;
+}
+
+.hero__suptitle {
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 40px;
+	letter-spacing: 1px;
+	color: #f00;
+
+}
+
+.hero__title {
+	width: 100%;
+	max-width: 375px;
+	
+	font-size: 42px;
+	font-weight: 700;
+	line-height: 56px;
+	color: #333;
+}
+
+.hero__text {
+	font-size: 22px;
+	line-height: 40px;
+	letter-spacing: 1px;
+	color: rgba(51, 51, 51, 0.65);
+	margin: 20px 0 30px;
+}
+
+.btn {
+	display: inline-block;
+	padding: 12px 32px;
+
+	font-size: 24px;
+	line-height: 29px;
+
+	color: #fff;
+	background: #44b564;
+	transition: all .2s ease;
+	border-radius: 24px;
+
+	&:hover {
+		background: #45bd67;
+	}
+}
+
+.statistics {
+	background: #fff;
+	transition: all .3s ease;
+	box-shadow: 0px 0px 57px -7px rgba(119, 119, 119, 0.12);
+	padding: 40px 90px 25px;
+	border-radius: 24px;
+
+	&:hover {
+		box-shadow: 0 0 57px -6px rgb(119, 119, 119, 0.22);
+	}
+}
+
+.statistics__info {
+	display: flex;
+	justify-content: space-between;
+}
+
+.statistics__item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.statistics__case {
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 24px;
+	color: #555;
+}
+
+.statistics__count {
+	font-size: 28px;
+	font-weight: 600;
+	line-height: 34px;
+	letter-spacing: 1.5px;
+	color: #484848;
+
+	margin: 10px 0 11px;
+
+	&--green {
+		color: #64cf82;
+	}
+
+	&--red {
+		color: #f00;
+	}
+}
+
+.statistics__overall {
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 22px;
+	color: #777;
+}
+
+.statistics__update {
+	display: flex;
+	justify-content: center;
+	margin-top: 43px;
+}
+
+.statistics__country {
+	margin-left: 22px;
+
+	&:after {
+		content: '';
+		display: inline-block;
+		vertical-align: middle;
+		width: 2px;
+		height: 17px;
+		background: #777;
+		margin: 0 13px 0 10px;
+	}
+}
+
+.action {
+	padding: 125px 0 140px;
+	background: url('../img/action/bacterium.svg') no-repeat top right;
+}
+
+.action__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.action__right {
+	width: 100%;
+	max-width: 512px;
+}
+
+.title {
+	font-size: 36px;
+	font-weight: 600;
+	line-height: 40px;
+	letter-spacing: 1px;
+	color: #333;
+
+	&:after {
+		content: '';
+		display: block;
+		background: #64cf83;
+		width: 152px;
+		height: 3px;	
+		margin: 20px 0 30px;
+	}
+}
+
+.action__text {
+	margin-bottom: 25px;
+}
+
+.text {
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 32px;
+	letter-spacing: 1px;
+	color: #555;
+}
+
+.action__list {
+	display: flex;
+	flex-direction: column;
+}
+
+.list__item {
+	padding-left: 50px;
+	margin-bottom: 10px;
+	position: relative;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&:before {
+		content: '';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		background: url('../img/action/virus.svg') no-repeat;
+		left: 0;
+		z-index: 1;
+
+	}	
+}
+
+.action__contact {
+	display: flex;
+	align-items: center;
+	transition: all .2s ease;
+	position: relative;
+
+	margin-top: 41px;
+	padding-left: 15px;
+	
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 22px;
+	color: #444;
+
+	&:before {
+		content: '';
+		width: 42px;
+		height: 49px;
+		background: url('../img/action/ellipse.svg') no-repeat;
+		transition: all .2s ease;
+		position: absolute;
+		left: 0;
+		z-index: 1;
+	}
+
+	&:hover {
+		color: #5f5e5e;
+		
+		&:before {
+			transform: translate(-5px, 0);
+		}
+
+		svg {
+			fill: #5f5e5e;
+			transform: translate(5px, 0);
+		}
+	}
+
+	svg {
+		fill: #2E3A59;
+		margin-left: 10px;
+		transition: all .2s ease;
+	}
+}
+	
+.prevention {
+	padding-bottom: 140px;
+}
+
+.prevention__header {
+	width: 100%;
+	max-width: 854px;
+	margin: 0 auto 110px;
+	text-align: center;
+}
+
+.prevention__title {
+	&:after {
+		margin: 20px auto 30px;
+	}
+}
+
+.prevention__ways {
+	display: flex;
+	justify-content: space-between;
+	gap: 65px 0;
+}
+
+.prevention__way {
+	width: 100%;
+	height: 330px;
+	max-width: 330px;
+	background: #fff;
+	box-shadow: 0px 0px 44px -5px rgba(102, 102, 102, 0.1);
+	transition: all .2s ease;
+	border-radius: 25px;
+	position: relative;
+
+	img {
+		position: absolute;
+		top: -45px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	&:hover {
+		box-shadow: 0px 0px 44px -5px rgba(102, 102, 102, 0.25);
+	}
+}
+
+.prevention__content {
+	padding: 179px 40px 25px;
+}
+
+.prevention__action {
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 32px;
+	text-align: center;
+	color: #333;
+}
+
+.prevention__info {
+	width: 100%;
+	max-width: 250px;
+
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 28px;
+	letter-spacing: 0.2px;
+	color: #777;
+}
+
+.symptoms {
+	position: relative;
+	background: url('../img/symptoms/bacterium.svg') no-repeat left;
+	padding-bottom: 51px;
+	
+	&:after {
+		content: '';
+		width: 151px;
+		height: 164px;
+		background: url('../img/symptoms/viruses.svg') no-repeat;
+		position: absolute;
+		right: 0;
+		bottom: 25%;
+	}
+}
+
+.symptoms__header {
+	margin-bottom: 50px;
+}
+
+.symptoms__inner {
+	width: 100%;
+	max-width: 854px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 auto;
+}
+
+.contact {
+	background: linear-gradient(339.88deg, #64CF83 47.7%, #FFFFFF 47.71%);
+}
+
+.contact__inner {
+	padding: 119px 0 40px;
+}
+
+.contact__form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	background: #fff;
+	margin-bottom: 117px;
+	padding: 60px 157px 53px;
+	box-shadow: 0px 29px 0px -14px #5BC378, 
+		0px 52px 0px -24px #4DB76B,
+		0px 0px 50px -1px rgba(82, 82, 82, 0.1);
+	border-radius: 40px;
+}
+
+.contact__header {
+	margin-bottom: 50px;
+}
+
+.contact__title {
+	&:after {
+		margin: 20px auto 26px;
+	}
+}
+
+.contact__help {
+	width: 100%;
+	margin-top: 86px;
+
+	display: flex;
+	justify-content: space-between;
+}
+
+.contact__box {
+	width: 100%;
+	max-width: 213px;
+}
+
+.contact__info {
+	display: flex;
+	align-items: center;
+
+	img {
+		width: 30px;
+		height: 32px;
+		margin-right: 15px;
+	}
+
+	&:first-child {
+		margin-bottom: 45px;
+	}
+}
+
+.contact__name {
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 22px;
+	color: #555;
+
+	&:first-child {
+		margin-bottom: 7px;
+	}	
+}
+
+.contact__phone {
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.contact-form {
+	width: 100%;
+	max-width: 380px;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.contact__input {
+	position: relative;
+	margin-bottom: 25px;
+
+	img {
+		width: 17px;
+		height: 18px;
+		position: absolute;
+		top: 50%;
+		right: 25px;
+		transform: translateY(-50%);
+	}
+}
+
+.contact-input {
+	width: 100%;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 22px;
+	color: #777;
+
+	background: #f9f9f9;
+	border-radius: 12px;
+	padding: 22px 25px 21px;
+}
+
+.contact__select {
+	position: relative;
+	margin-bottom: 25px;
+
+	img {
+		content: '';
+		width: 12px;
+		height: 18px;
+		position: absolute;
+		top: 50%;
+		right: 25px;
+		transform: translateY(-50%);
+		cursor: pointer;
+	}
+}
+
+.contact-select {
+	appearance: none;
+	background: #f9f9f9;
+}
+
+.contact__desc {
+	position: relative;
+
+	img {
+		position: absolute;
+		top: 24px;
+		right: 25px;
+		z-index: 6;
+	}
+}
+
+.contact-desc {
+	width: 100%;
+	max-width: 380px;
+
+	background: #f9f9f9;
+	padding: 22px 10px 22px 25px;
+	border-radius: 12px;
+	resize: none;
+	
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 22px;
+	color: #777;
+}
+
+.contact-input,
+.contact-desc {
+	&:focus {
+		background: #f6f6f6;
+	}
+}
+
+.contact__footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.copyright {
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 22px;
+	color: #fff;
+}
+
+.btn-footer {
+	transition: all .3s ease;
+
+	&:hover {
+		svg {
+			transform: translate(0, -4px);
+		}
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.header {
+		background: none;
+		padding: 33px 20px 66px;
+	}
+
+	.hero__left {
+		max-width: 535px;
+	}
+
+	.hero__right {
+		max-width: 475px;
+	}
+
+	.statistics {
+		margin: 0 20px;
+		padding: 40px 55px 25px;
+	}
+
+	.action__inner {
+		padding-right: 10px;
+	}
+
+	.action__left {
+		max-width: 475px;
+	}
+
+	.action__right {
+		max-width: 470px;
+	}
+
+	.prevention__ways {
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 65px 35px;
+	}
+
+	.symptoms {
+		background: none;
+		position: relative;
+
+		&:before {
+			content: '';
+			width: 290px;
+			height: 236px;
+			background: url('../img/symptoms/bacterium.svg') no-repeat;
+			position: absolute;
+			top: 50%;
+			left: -6%;
+			z-index: 1;
+			transform: translateY(-50%);
+		}
+	}
+
+	.contact__inner {	
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.contact__form {
+		padding: 60px 110px 53px;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.header {
+		padding: 33px 10px 66px;
+	}	
+
+	.nav__link {
+		margin-right: 20px;
+	}
+	
+	.hero__left {
+		max-width: 400px;
+	}
+
+	.hero__right {
+		max-width: 400px;
+	}
+
+	.statistics {
+		margin: 0 30px;
+		padding-bottom: 30px;
+	}
+
+	.statistics__info {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 35px 50px;
+	}
+
+	.statistics__item {
+		width: 100%;
+		max-width: 185px;
+	}
+
+	.action {
+		.title:after {
+			margin: 20px auto 30px;
+		}
+	}
+
+	.action__inner {
+		flex-direction: column;
+	}
+
+	.action__left {
+		max-width: 400px;
+		margin-bottom: 20px;
+	}
+
+	.action__text,
+	.action__title {
+		text-align: center;
+	}
+
+	.action__text {
+		margin-bottom: 40px;
+	}
+
+	.prevention__header {
+		max-width: 700px;
+	}
+
+	.prevention {
+		padding-bottom: 120px;
+	}
+
+	.symptoms {
+		&:before {
+			left: -22%;
+		}
+
+		&:after {
+			background: none;
+		}
+	}
+	
+	.contact__inner {
+		width: 95%;
+	}
+
+	.contact__form {
+		padding: 60px 40px 53px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.header {
+		padding: 33px 20px 66px;
+		background: url('../img/header/bacterium.svg') no-repeat center left;
+	}
+	
+	.header__burger {
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 20px;
+		cursor: pointer;
+
+		span {
+			width: 100%;
+			height: 2px;
+			background: #000;
+			transition: all .3s ease;
+			position: absolute;
+			top: 9px;
+			right: 0;
+		}
+
+		&:before,
+		&:after {
+			content: '';
+			width: 100%;
+			height: 2px;
+			background: #000;
+			transition: all .3s ease;
+			position: absolute;
+			right: 0;
+		}
+
+		&:before {
+			top: 0;
+		}
+
+		&:after {
+			bottom: 0;
+		}
+
+		&.active {
+			span {
+				transform: scale(0);
+			}
+
+			&:after {
+				bottom: 9px;
+    			transform: rotate(45deg);
+			}
+
+			&:before {
+				top: 9px;
+    			transform: rotate(-45deg);
+			}
+		}
+	}
+
+	.nav {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		visibility: hidden;
+		background: #f9f9f9;
+		transition-duration: 0.25s;
+		padding: 85px 0;
+
+		position: fixed;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+
+		&.active {
+			visibility: visible;
+    		left: 0;
+		}
+	}
+
+	.nav__link {
+		font-size: 20px;
+		font-weight: 500;
+		letter-spacing: 1px;
+
+		transition-duration: 0.25s;
+		padding: 30px 0;
+		margin: 0;
+		
+		&:first-child {
+			padding-top: 0;
+		}
+
+		&:after {
+			display: none;
+		}
+	}
+
+	.hero__inner {
+		flex-direction: column-reverse;
+
+	}
+
+	.hero__left {
+		max-width: 600px;
+		text-align: center;
+	}
+
+	.hero__title {
+		margin: 0 auto;
+		max-width: 400px;	
+	}
+
+	.hero__right {
+		max-width: 450px;
+		margin-bottom: 25px;
+	}
+
+	.btn {
+		padding: 16px 32px;
+	}
+
+	.prevention__header {
+		max-width: 556px;
+	}
+
+	.prevention__ways {
+		gap: 75px 35px;
+	}
+
+	.prevention__way {
+		height: 345px;
+	}
+
+	.prevention__action {
+		font-size: 22px;
+	}
+
+	.prevention__info {
+		font-size: 16px;
+		text-align: center;
+		margin-top: 5px;
+	}
+
+	.symptoms {
+		&:before {
+			top: 25%;
+			left: -30%;
+		}
+
+		&:after {
+			right: 0;
+			bottom: -13%;
+			background: url('../img/symptoms/viruses.svg') no-repeat;
+		}
+	}
+
+	.contact__inner {
+		padding-top: 140px;
+	}
+
+	.contact__img {
+		max-width: 470px;
+	}
+
+	.contact__help {
+		margin-top: 70px;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.contact__box {
+		margin-bottom: 30px;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.header {
+		padding: 33px 15px 66px;
+	}
+
+	.hero__right,
+	.contact__img,
+	.action__left {
+		max-width: 300px;
+	}
+
+	.hero__title {
+		font-size: 39px;
+	}
+
+	.statistics {
+		margin: 0 10px;
+		padding: 40px 0px 25px;
+	}
+
+	.statistics__update {
+		flex-wrap: wrap;
+		gap: 20px;
+	}
+
+	.statistics__country {
+		margin: 0;
+
+		&:after {
+			display: none;
+		}
+	}
+
+	.action {
+		padding: 70px 0 100px;
+		background: url('../img/action/bacterium.svg') no-repeat center right;
+	}
+
+	.action__right {
+		max-width: 420px;
+	}
+
+	.prevention__header {
+		max-width: 466px;
+	}
+
+	.prevention__ways {
+		gap: 75px 35px;
+	}
+
+	.symptoms {
+		&:before,
+		&:after {
+			background: none;
+		}
+	}
+
+	.symptoms__inner {
+		img {
+			max-width: 300px;
+		}
+	}
+
+	.contact__inner {
+		width: 100%;
+		padding-top: 70px;
+	}
+
+	.contact__form {
+		margin-bottom: 80px;
+		padding: 60px 20px 53px;
+	}
+
+	.contact__help {
+		margin-top: 60px;
+		align-items: center;
+	}
+
+	.contact__footer {
+		flex-direction: column;
+	}
+
+	.copyright {
+		text-align: center;
+
+		&:first-child {
+			margin-bottom: 20px;
+		}
+
+		&:last-child {
+			margin-right: 16px;
+		}
+	}
+}
