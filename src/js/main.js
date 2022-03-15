@@ -15,6 +15,9 @@ burgerBtn.addEventListener('click', () => {
 		if (burgerList[i].classList.contains('active')) {
 			document.body.style.overflow = 'hidden';
 			document.documentElement.style.scrollBehavior = 'auto';
+		} else {
+			document.body.style.overflow = 'auto';	
+			document.documentElement.style.scrollBehavior = 'smooth';
 		}
 	}
 })
