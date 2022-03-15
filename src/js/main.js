@@ -10,7 +10,8 @@ burgerBtn.addEventListener('click', () => {
 	burgerList.forEach((e) => {
 		e.classList.toggle('active');
 	})
-
+	
+	// Anchor crossing
 	for (let i = 0; i < burgerList.length; i++) {
 		if (burgerList[i].classList.contains('active')) {
 			document.body.style.overflow = 'hidden';
